@@ -1,5 +1,5 @@
 module.exports = {
-  entry: './lib/pikachu.js',
+  entry: './lib/pikachuRacer.js',
   output: {
     path: './lib',
     filename: 'bundle.js',
