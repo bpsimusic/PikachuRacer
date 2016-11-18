@@ -1,0 +1,79 @@
+html, body, section, article,
+h1, h2, h6, p, strong, em{
+  margin: 0;
+  border: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: inherit;
+  font: inherit;
+  text-decoration: inherit;
+  text-align: inherit;
+  color: inherit;
+  background: transparent;
+}
+
+#clear {
+  position: absolute;
+  width: 700px;
+  height: 380px;
+  border: 5px solid black;
+}
+
+#clear img {
+  width: 700px;
+  height: 380px;
+}
+
+#clear p {
+  font-family: Helvetica;
+  font-size: 40px;
+  text-align: center;
+  position: relative;
+  bottom: 230px;
+  font-weight: 900;
+}
+
+#game-area {
+  display: block;
+  margin: auto;
+  width: 700px;
+  height: 380px;
+}
+.game-description {
+  width: 700px;
+  display: block;
+  margin: auto;
+  margin-top: 30px;
+  font-family: Helvetica;
+  line-height: 1.5
+}
+
+
+.headline {
+  font-family: Helvetica;
+  font-size: 50px;
+  text-align: center;
+}
+
+#instructions {
+  display: flex;
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 2px;
+  width: 700px;
+  justify-content: space-between;
+  font-family: Helvetica;
+}
+
+.player-canvas {
+  position: absolute;
+  border: 5px black solid;
+}
+
+a {
+  font-size: 20px;
+  font-family:sans-serif;
+  position: relative;
+  left: 8px;
+  top: 5px;
+}
