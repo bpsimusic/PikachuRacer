@@ -39,6 +39,12 @@ h1, h2, h6, p, strong, em{
   width: 700px;
   height: 380px;
 }
+
+#game-area button{
+  position: absolute;
+  left: 340px;
+  top: 360px;
+}
 .game-description {
   width: 700px;
   display: block;
