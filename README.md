@@ -1,67 +1,92 @@
 # Pikachu Racer
 
+[Pikachu live][mh]
+[mh]: https://musicianhub.herokuapp.com/#/
 
-### Background
+Pikachu Racer is a game coded using vanilla JavaScript and the Canvas API. Sprite and Entity architecture are used to render the images and detect collisions. Pikachu Racer is inspired by Super Mario and the Chrome Dinosaur game.
 
-Pikachu Racer is a side-scrolling game inspired by Mario and the Chrome Dinosaur game. Keep Pikachu running without running into obstacles for one-minute to win the game!
+All Pokemon images and trademarks used in Pikachu Racer belong to the Pokemon Company.
 
+![image of Songs Index](/docs/splash.png)
 
-### Functionality and MVP
-Users will be able to play the game by moving a character sprite left and right using the arrow keys, and jump using the space bar.
+## Sprite and Entities.
 
-Users can pause the game by clicking the game screen and toggle the music.
+An Entity is just a Plain Old JavaScript Object.
 
-### Architecture and Technologies
+```javascript
+let player = {
+    pos: [0, 430],
+    velY: 0,
+    boxSize: [70, 50],
+    jumping: false,
+    sprite: new Sprite(pikachu, [0, 0], [280, 200])
+};
+```
 
-I will be using Canvas as a viewport to display a small portion of a larger image (the entire game).
+A Sprite is an image that represents an Entity. As you can see the player Entity above has a sprite key.
 
-I will manipulate objects such as the Pikachu sprite within Canvas using the DOM and Vanilla Javascript; I will be using JQuery for collisions.
+I decided on using entities in order to animate images, such as jumping and moving.
 
-Webpack will be used to bundle the required scripts:
-
-**Pikachu.js:** The main player.
-
-**Projectile.js:** Any projectile. These will be randomly generated.
-
-**Object.js:** Any object within the screen. There 'x' and 'y' attributes for each object, as well as a velocity. This will contain a method called "collided".
-
-**Game.js:** The script that contains all objects, including the background image. It holds the logic for the win condition as well as the time.
-
-
-### Wireframes
-
-There will be a box on the browser that serves as the game screen.
-On the top left of the screen are simple directions for the game controls.
-You can toggle the music on the top right. Below the screen will be a
-short bio/about on the game. The left sidebar will have my Github/LinkedIn.
-
-As soon as you open the game in the browser, it should be clear to users that
-they click on the screen to start the game. The interface should be clear
-and simple.
-
-![wireframes](/docs/wireframes/screen.png)
+![image of Songs Index](/docs/PikachuDemo.png)
 
 
-### Implementation Timeline
+## Game Loop
 
-**Day One:**
-Get setup. Research Technologies, especially Canvas, and
-get started on the moving background.
+The game loop, simplified:
 
-**Day Two:**
-Get started on Pikachu player sprite, and have controls for moving left, right, and jump implemented. By the end of Day Two have a working sprite and moving background finished.
+```javascript
+function main() {
+  let now = Date.now();
+  let dt = (now - lastTime) / 1000.0;
+  update(dt);
+  render();
+  requestAnimFrame(main);
+}
+```
 
-**Day Three:**
+On each iteration of the game loop, the update method is called to update every Sprite. "dt" is in milliseconds, and is the difference in time between the last iteration and the current iteration of the loop.
 
-Research collision.
+After update, render is invoked to show the changes for each Sprite.
 
-Have random projectiles enter the screen from the right. When Pikachu player sprite collides with a projectile, the player loses. Make sure the game is not impossible to win when the projectiles enter: the projectiles should have some space between them.  
+requestAnimFrame is a variable I have defined:
 
+```javascript
+let requestAnimFrame = (function(){
+    return window.requestAnimationFrame       ||
+        window.webkitRequestAnimationFrame ||
+        window.mozRequestAnimationFrame    ||
+        window.oRequestAnimationFrame      ||
+        window.msRequestAnimationFrame     ||
+        function(callback){
+            window.setTimeout(callback, 1000 / 60);
+        };
+})();
+```
+requestAnimFrame's value will always be a function. RequestAnimationFrame tells the browser that an animation will be performed, and that the animation will need to be updated before performing the animation. RequestAnimationFrame requires a callback, which is why we pass it "main".
 
+There are multiple RequestAnimationFrame conditions in order to present browser compatibility.
 
-**Day Four:**
-Implement a win condition. When the Pikachu player sprite has traveled some distance OR played for a certain amount of time, the player wins. Debug minor problems. By the end of Day 4 the game should be finished.
+## Collision Detection
 
-**Bonus:**
-- Have items that boost the Pikachu player sprite.
-- Add music (Pokemon theme music).
+When two sprites collide, it's as if two rectangles were colliding.
+
+```javascript
+
+export const collision = (x,y,r,b,x2,y2,r2,b2) => {
+  return !(r<= (x2+4) || x > (r2+4) || b<=(y2+25) || y>(b2-4));
+};
+
+export const boxCollision = (pos, size, pos2, size2) => {
+  return collision(pos[0], pos[1], pos[0] + size[0], pos[1] + size[1],
+                  pos2[0], pos2[1], pos2[0] + size2[0], pos2[1] + size2[1]);
+};
+```
+
+(x,y) represents the top left corner of the first rectangle. (r, b) represents the bottom right corner of the rectangle. If any of the conditions return true, that means there is a gap between the two rectangles, which means they aren't touching. Constants were added to account for Pikachu's non-rectangular shape.
+
+## Future Project Plans
+
+- Add animation when Pikachu runs, as well as sound effects.
+- Add badges for Pikachu to collect, which will result in a score.
+- Add levels for increasing difficulty.
+- Add more difficulty with the incoming obstacles.
