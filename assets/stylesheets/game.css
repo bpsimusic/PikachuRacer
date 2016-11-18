@@ -41,9 +41,9 @@ h1, h2, h6, p, strong, em{
 }
 
 #game-area button{
-  position: absolute;
-  left: 340px;
-  top: 360px;
+  position: relative;
+  left: 320px;
+  top: 245px;
 }
 .game-description {
   width: 700px;
