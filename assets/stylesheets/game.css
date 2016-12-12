@@ -44,8 +44,16 @@ html {
 }
 
 .fa-volume-up {
+  position:relative;
+  left:10px;
   cursor: pointer;
 }
+.fa-volume-off {
+  position: relative;
+  right: 5px;
+  cursor: pointer;
+}
+
 
 #game-area {
   display: block;
