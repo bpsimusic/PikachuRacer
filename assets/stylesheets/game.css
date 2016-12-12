@@ -31,7 +31,7 @@ html {
 }
 
 #clear p {
-  font-family: Helvetica;
+  font-family: Montserrat;
   font-size: 40px;
   text-align: center;
   position: relative;
@@ -72,13 +72,13 @@ html {
   display: block;
   margin: auto;
   margin-top: 30px;
-  font-family: Helvetica;
+  font-family: Montserrat;
   line-height: 1.5
 }
 
 
 .headline {
-  font-family: Helvetica;
+  font-family: Montserrat;
   font-size: 50px;
   text-align: center;
 }
@@ -90,13 +90,15 @@ html {
   margin-bottom: 2px;
   width: 700px;
   justify-content: space-between;
-  font-family: Helvetica;
+  font-family: Hind;
 }
 
 .player-canvas {
   position: absolute;
   border: 5px black solid;
 }
+
+
 
 a {
   font-size: 20px;
