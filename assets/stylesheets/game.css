@@ -12,6 +12,12 @@ h1, h2, h6, p, strong, em{
   background: transparent;
 }
 
+html {
+  background: url("../wallpaper.jpg");
+  background-size: cover;
+  height: 100vh;
+}
+
 #clear {
   position: absolute;
   width: 700px;
@@ -31,6 +37,14 @@ h1, h2, h6, p, strong, em{
   position: relative;
   bottom: 230px;
   font-weight: 900;
+}
+
+.fa {
+  font-size: 30px;
+}
+
+.fa-volume-up {
+  cursor: pointer;
 }
 
 #game-area {
