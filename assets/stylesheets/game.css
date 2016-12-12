@@ -12,11 +12,7 @@ h1, h2, h6, p, strong, em{
   background: transparent;
 }
 
-html {
-  background: url("../wallpaper.jpg");
-  background-size: cover;
-  height: 100vh;
-}
+
 
 #clear {
   position: absolute;
@@ -37,6 +33,13 @@ html {
   position: relative;
   bottom: 230px;
   font-weight: 900;
+}
+
+.contacts {
+  position: absolute;
+  z-index: 1;
+  left: 8px;
+  top: 5px;
 }
 
 .fa {
@@ -68,12 +71,17 @@ html {
   top: 245px;
 }
 .game-description {
-  width: 700px;
+  background: white;
+  padding: 15px;
+  border: 1px solid black;
+  position: relative;
+  left: 5px;
+  width: 680px;
   display: block;
   margin: auto;
   margin-top: 30px;
-  font-family: Montserrat;
-  line-height: 1.5
+  font-family: Hind;
+  line-height: 1.5;
 }
 
 
@@ -81,6 +89,21 @@ html {
   font-family: Montserrat;
   font-size: 50px;
   text-align: center;
+}
+
+html {
+  background: url("../wallpaper.jpg");
+  background-size: cover;
+  height: 100vh;
+}
+
+h6 {
+  position: relative;
+  top: 5px;
+}
+
+img {
+  width: 60px;
 }
 
 #instructions {
@@ -96,14 +119,4 @@ html {
 .player-canvas {
   position: absolute;
   border: 5px black solid;
-}
-
-
-
-a {
-  font-size: 20px;
-  font-family:sans-serif;
-  position: relative;
-  left: 8px;
-  top: 5px;
 }
