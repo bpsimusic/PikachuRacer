@@ -89,11 +89,15 @@ h1, h2, h6, p, strong, em{
   font-family: Montserrat;
   font-size: 50px;
   text-align: center;
+
+  color: #ffff00;
+  text-shadow: -2px 0 #0000e6, 0 2px #0000e6, 2px 0 #0000e6, 0 -2px #0000e6;
 }
 
 html {
   background: url("../wallpaper.jpg");
-  background-size: cover;
+  background-size: 120%;
+  background-position: 40% 28%;
   height: 100vh;
 }
 
