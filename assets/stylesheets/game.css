@@ -14,25 +14,58 @@ h1, h2, h6, p, strong, em{
 
 
 
-#clear {
-  position: absolute;
-  width: 700px;
-  height: 380px;
-  border: 5px solid black;
+#arrows {
+  width: 200px;
+  height: 200px;
+}
+#pikachu {
+  position: relative;
+    right: 50px;
+    top: 50px;
+  width: 100px;
+  height: 100px;
+}
+#pokeball {
+  width: 150px;
+  height: 150px;
 }
 
-#clear img {
-  width: 700px;
-  height: 380px;
+#move-message {
+  position: relative;
+  font-family: Hind;
+font-size: 30px;
+right: 80px;
+top: 10px;
+}
+
+#avoid-message {
+  position: relative;
+  right: 50px;
+  bottom: 80px;
+  font-family: Hind;
+font-size: 30px;
+}
+#clear {
+  position: absolute;
+  width: 1200px;
+  height: 650px;
+  border: 5px solid black;
+  background: white
 }
 
 #clear p {
   font-family: Montserrat;
   font-size: 40px;
   text-align: center;
-  position: relative;
-  bottom: 230px;
   font-weight: 900;
+}
+
+#click-to-play {
+  margin-top: 100px;
+}
+
+#click-to-play p{
+  font-size: 50px;
 }
 
 .contacts {
@@ -57,12 +90,19 @@ h1, h2, h6, p, strong, em{
   cursor: pointer;
 }
 
+.flex {
+  display: flex;
+  justify-content: space-around;
+  width: 80%;
+margin: auto;
+margin-top: 50px;
+}
 
 #game-area {
   display: block;
   margin: auto;
-  width: 700px;
-  height: 380px;
+  width: 1200px;
+  height: 650px;
 }
 
 #game-area button{
