@@ -83,11 +83,13 @@ font-size: 30px;
   position:relative;
   left:10px;
   cursor: pointer;
+  margin-left:auto;
 }
 .fa-volume-off {
   position: relative;
   right: 5px;
   cursor: pointer;
+  margin-left:auto;
 }
 
 .flex {
@@ -169,9 +171,7 @@ img {
 #instructions {
   display: flex;
   margin: auto;
-  margin-top: 20px;
-  margin-bottom: 2px;
-  width: 700px;
+  width: 1200px;
   justify-content: space-between;
   font-family: Hind;
 }
