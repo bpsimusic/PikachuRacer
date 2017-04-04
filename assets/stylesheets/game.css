@@ -108,8 +108,9 @@ margin-top: 50px;
 }
 
 #game-area button{
-  position: relative;
-    left: 310px;
+    position: relative;
+    margin: auto;
+    left: 550px;
     top: 230px;
     padding: 8px 8px;
     border-radius: 100px;
@@ -125,6 +126,7 @@ button:focus {
 }
 button:hover {
   cursor:pointer;
+  opacity: 0.8;
 }
 
 
