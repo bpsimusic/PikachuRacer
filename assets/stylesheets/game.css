@@ -154,7 +154,7 @@ button:hover {
 }
 
 html {
-  background: url("../wallpaper.jpg");
+  background: url("../images/wallpaper.jpg");
   background-size: 120%;
   background-position: 40% 28%;
   height: 100vh;

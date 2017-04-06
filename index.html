@@ -3,19 +3,17 @@
   <head>
     <meta charset="utf-8">
     <title>Pikachu Racer</title>
-    <link rel="shortcut icon" type="image/png" href="assets/pokeballfavicon.png">
+    <link rel="shortcut icon" type="image/png" href="assets/images/pokeballfavicon.png">
     <link href="https://fonts.googleapis.com/css?family=Hind|Montserrat" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="assets/stylesheets/game.css">
-    <script type="text/javascript"
-            src="lib/bundle.js">
-    </script>
+
   </head>
   <body>
 
       <div class="contacts">
-        <a href="https://github.com/bpsimusic"><img src="./assets/github.png" alt=""></a>
-        <a href="https://www.linkedin.com/in/briantsai1"><img src="./assets/linkedin.png" alt=""></a>
+        <a href="https://github.com/bpsimusic"><img src="./assets/images/github.png" alt=""></a>
+        <a href="https://www.linkedin.com/in/briantsai1"><img src="./assets/images/linkedin.png" alt=""></a>
       </div>
 
       <h1 class="headline">Pikachu Racer</h1>
@@ -23,8 +21,12 @@
 
       </div>
       <div id="game-area">
+        <canvas id="canvas" class="player-canvas" width="1200" height="650"></canvas>
       </div>
-      <audio src="assets/themesong.mp3" id="theme-song">
+      <audio src="assets/audio/themesong.mp3" id="theme-song">
       </audio>
+      <script type="text/javascript"
+              src="lib/bundle.js">
+      </script>
   </body>
 </html>
