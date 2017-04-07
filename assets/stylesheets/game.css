@@ -12,6 +12,11 @@ h1, h2, h6, p, strong, em{
   background: transparent;
 }
 
+@font-face {
+  font-family: 'SuperMario';
+  src: url("../fonts/emulogic.ttf");
+}
+
 
 
 #arrows {
