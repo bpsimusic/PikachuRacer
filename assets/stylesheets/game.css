@@ -20,9 +20,17 @@ h1, h2, h6, p, strong, em{
 
 
 #arrows {
-  width: 200px;
-  height: 200px;
+  width: 150px;
+  height: 150px;
+  position:relative;
+  left: 100px;
 }
+
+#avoidEnemy {
+  display: flex;
+  align-items: center;
+}
+
 #pikachu {
   position: relative;
     right: 50px;
@@ -44,12 +52,22 @@ top: 10px;
 }
 
 #avoid-message {
-  position: relative;
-  right: 50px;
-  bottom: 80px;
   font-family: Hind;
-font-size: 30px;
+  font-size: 30px;
+  margin-right: 50px;
 }
+
+#berry {
+  width: 100px;
+  height: 100px;
+}
+
+#berryCollect {
+  display: flex;
+  align-items: center;
+  font-family: Hind;
+}
+
 #clear {
   position: absolute;
   width: 1200px;
@@ -66,11 +84,17 @@ font-size: 30px;
 }
 
 #click-to-play {
-  margin-top: 100px;
+  margin-top: 50px;
 }
 
 #click-to-play p{
   font-size: 50px;
+}
+
+#collect-message {
+  font-size: 30px;
+  position: relative;
+  right: 50px;
 }
 
 .contacts {
@@ -102,7 +126,7 @@ font-size: 30px;
   justify-content: space-around;
   width: 80%;
 margin: auto;
-margin-top: 50px;
+margin-top: 20px;
 }
 
 #game-area {
@@ -133,7 +157,6 @@ button:hover {
   cursor:pointer;
   opacity: 0.8;
 }
-
 
 .game-description {
   background: white;
@@ -186,4 +209,29 @@ img {
 .player-canvas {
   position: absolute;
   border: 5px black solid;
+}
+
+#pidgey {
+  width: 100px;
+  height: 100px;
+  margin-left: 30px;
+}
+
+#pikachuMove {
+  position: relative;
+bottom: 20px;
+
+    right: 50px;
+}
+
+#pokeball {
+  width: 100px;
+  height: 100px;
+}
+
+#win-message {
+  font-family: Hind !important;
+  font-size: 30px !important;
+  font-weight: normal !important;
+  margin-top: 20px;
 }
