@@ -1,7 +1,6 @@
 # Pikachu Racer
 
-[Pikachu Racer live][pr]
-[pr]: https://bpsimusic.github.io/PikachuRacer/
+[Pikachu Racer live](https://bpsimusic.github.io/PikachuRacer/)
 
 Pikachu Racer is a game coded using vanilla JavaScript and the Canvas API. Sprite and Entity architecture are used to render the images and detect collisions. Pikachu Racer is inspired by Super Mario and the Chrome Dinosaur game.
 [Credits](#credits)
