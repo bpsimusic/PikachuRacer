@@ -3,7 +3,7 @@
 [Pikachu Racer live](https://bpsimusic.github.io/PikachuRacer/)
 
 Pikachu Racer is a game coded using vanilla JavaScript and the Canvas API. Sprite and Entity architecture are used to render the images and detect collisions. Pikachu Racer is inspired by Super Mario and the Chrome Dinosaur game.
-[Credits](#credits)
+[Credits](#Credits)
 
 ![image of Game](/docs/splash.png)
 
@@ -89,7 +89,7 @@ export const boxCollision = (pos, size, pos2, size2) => {
 - Add levels for increasing difficulty.
 - Add more difficulty with the incoming obstacles.
 
-## Credits <a name="credits"></a>
+## Credits
 
 All Pokemon images and trademarks used in Pikachu Racer belong to the Pokemon Company.
 
