@@ -139,15 +139,14 @@ margin-top: 20px;
 #game-area button{
     position: relative;
     margin: auto;
-    left: 550px;
-    top: 230px;
+    left: 530px;
+    top: 115px;
     padding: 8px 8px;
     border-radius: 100px;
-    background: #8470FF;
+    background: white;
     border: 1px black solid;
-    /* width: 100px; */
-    width: 100px;
-    font-size: 14px;
+    width: 150px;
+    font-size: 18px;
 }
 
 button:focus {
