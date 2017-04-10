@@ -31,6 +31,10 @@ h1, h2, h6, p, strong, em{
   align-items: center;
 }
 
+.credit {
+  position:
+}
+
 #pikachu {
   position: relative;
     right: 50px;
@@ -110,13 +114,15 @@ top: 10px;
 
 .fa-volume-up {
   position:relative;
+  font-size: 40px;
   left:10px;
   cursor: pointer;
   margin-left:auto;
 }
 .fa-volume-off {
   position: relative;
-  right: 5px;
+  font-size: 40px;
+  right: 10px;
   cursor: pointer;
   margin-left:auto;
 }
